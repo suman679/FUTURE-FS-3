@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TuneFlow AI | Music Reimagined</title>
+  <meta name="description" content="TuneFlow AI redesigned with AI — modern UI, SEO optimized, mobile-first experience.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --spotify-green: #1db954;
+      --dark-bg: #121212;
+      --dark-card: #181818;
+    }
+    body.light {
+      background: #f9fafb;
+      color: #111827;
+    }
+    body.light header, body.light footer {
+      background: white;
+      color: #111827;
+    }
+    body.light .card {
+      background: #ffffff;
+      color: #111827;
+    }
+  </style>
+</head>
+<body class="bg-[var(--dark-bg)] text-white font-sans">
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 bg-[var(--dark-bg)] shadow-md">
+    <div class="container mx-auto flex items-center justify-between px-6 py-4">
+      <div class="flex items-center gap-2">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="TuneFlow Logo" class="h-8 w-8">
+        <span class="font-bold text-xl">TuneFlow AI</span>
+      </div>
+      <nav class="hidden md:flex space-x-6 font-medium">
+        <a href="#discover" class="hover:text-[var(--spotify-green)]">Discover</a>
+        <a href="#playlists" class="hover:text-[var(--spotify-green)]">Playlists</a>
+        <a href="#about" class="hover:text-[var(--spotify-green)]">About</a>
+      </nav>
+      <button id="toggleMode" class="ml-4 px-3 py-2 border rounded text-sm hover:bg-neutral-700">
+        🌙
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative">
+    <div class="container mx-auto px-6 py-20 text-center">
+      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+        Music Reimagined with <span class="text-[var(--spotify-green)]">AI</span>
+      </h1>
+      <p class="mt-4 text-lg text-neutral-300 max-w-2xl mx-auto">
+        A modern, AI-powered redesign of music streaming with fresh branding, immersive UI, and a seamless listening experience.
+      </p>
+      <div class="mt-6 flex gap-4 justify-center">
+        <a href="#discover" class="px-6 py-3 bg-[var(--spotify-green)] text-black rounded-lg shadow hover:scale-105 transition">
+          Start Listening
+        </a>
+        <a href="#about" class="px-6 py-3 border rounded-lg hover:bg-neutral-800 transition">
+          Learn More
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Discover Section -->
+  <section id="discover" class="container mx-auto px-6 py-16">
+    <h2 class="text-3xl font-bold mb-6">Discover New Vibes</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="discover-grid"></div>
+  </section>
+
+  <!-- Playlists -->
+  <section id="playlists" class="bg-[var(--dark-card)] py-16">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-6">Curated Playlists</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="playlist-grid"></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="container mx-auto px-6 py-16 text-center">
+    <h2 class="text-3xl font-bold">About the Project</h2>
+    <p class="mt-4 text-neutral-300 max-w-2xl mx-auto">
+      This reimagined design of a music platform was built using AI tools for branding, typography, and color palettes. 
+      The goal: create a cleaner, mobile-first, and SEO-friendly user journey — powered by creativity and technology.
+    </p>
+  </section>
+
+  <!-- Music Player -->
+  <div class="fixed bottom-0 left-0 w-full bg-black/90 backdrop-blur-lg p-4 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <img src="https://images.unsplash.com/photo-1508780709619-79562169bc64?w=300&q=80" alt="Now Playing" class="h-12 w-12 rounded">
+      <div>
+        <h4 class="font-semibold">AI Chill Beats</h4>
+        <p class="text-sm text-neutral-400">Lo-fi Neural Mix</p>
+      </div>
+    </div>
+    <div>
+      <button id="playBtn" class="px-4 py-2 bg-[var(--spotify-green)] text-black rounded-lg font-medium">
+        ▶ Play
+      </button>
+    </div>
+    <audio id="audioPlayer" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+  </div>
+
+  <!-- Footer -->
+
+  <!-- About -->
+<section id="about" class="container mx-auto px-6 py-16 text-center">
+  <h2 class="text-3xl font-bold mb-6">About TuneFlow AI</h2>
+  <p class="mt-4 text-neutral-300 max-w-2xl mx-auto">
+    TuneFlow AI isn’t just a redesign — it’s a vision of the future of music streaming.  
+    Crafted with <span class="text-[var(--spotify-green)] font-semibold">AI-driven design</span>, 
+    this project blends creativity and technology for an unforgettable user experience.
+  </p>
+
+  <!-- Feature Highlights -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+    <div class="p-6 bg-[var(--dark-card)] rounded-2xl shadow hover:shadow-lg transition">
+      <div class="text-[var(--spotify-green)] text-4xl mb-4">🤖</div>
+      <h3 class="text-xl font-semibold mb-2">AI Powered</h3>
+      <p class="text-neutral-400 text-sm">Smart playlists, neural beats, and generative music recommendations.</p>
+    </div>
+    <div class="p-6 bg-[var(--dark-card)] rounded-2xl shadow hover:shadow-lg transition">
+      <div class="text-[var(--spotify-green)] text-4xl mb-4">📱</div>
+      <h3 class="text-xl font-semibold mb-2">Mobile First</h3>
+      <p class="text-neutral-400 text-sm">Designed for seamless use on phones, tablets, and desktops alike.</p>
+    </div>
+    <div class="p-6 bg-[var(--dark-card)] rounded-2xl shadow hover:shadow-lg transition">
+      <div class="text-[var(--spotify-green)] text-4xl mb-4">🚀</div>
+      <h3 class="text-xl font-semibold mb-2">SEO Friendly</h3>
+      <p class="text-neutral-400 text-sm">Optimized for discoverability with fast performance and clean structure.</p>
+    </div>
+  </div>
+    <footer class="bg-black text-neutral-400 text-sm py-6 text-center">
+    © 2025 TuneFlow AI — Internship Project at Future Interns
+  </footer>
+</section>
+
+
+  <!-- JavaScript -->
+  <script>
+    const discoverData = [
+      { title: "AI Chill Beats", desc: "Lo-fi and AI-generated tracks for focus.", img: "https://images.unsplash.com/photo-1497032205916-ac775f0649ae?w=600&q=80" },
+      { title: "Neo Pop Mix", desc: "Fresh pop hits with futuristic remixes.", img: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&q=80" },
+      { title: "Cinematic AI", desc: "Epic soundscapes generated by neural networks.", img: "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?w=600&q=80" },
+      { title: "Synthwave Dreams", desc: "Retro 80s vibes with AI synth magic.", img: "https://images.unsplash.com/photo-1507878866276-a947ef722fee?w=600&q=80" },
+      { title: "Future Bass", desc: "Energetic drops powered by AI creativity.", img: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600&q=80" },
+      { title: "Calm AI Piano", desc: "Relaxing piano music composed by algorithms.", img: "https://images.unsplash.com/photo-1485579149621-3123dd979885?w=600&q=80" },
+      { title: "AI Rock Fusion", desc: "Rock guitars blended with AI rhythms.", img: "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?w=600&q=80" },
+      { title: "Trance Universe", desc: "Psytrance and AI soundscapes for deep journeys.", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=600&q=80" },
+      { title: "AI Reggae Flow", desc: "Chill reggae tracks reimagined with AI.", img: "https://images.unsplash.com/photo-1551907234-7190d2601e03?w=600&q=80" },
+      { title: "Digital Orchestra", desc: "AI-powered symphonies and orchestral music.", img: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&q=80" },
+      { title: "AI Trap Zone", desc: "Hard-hitting trap beats created by neural beats.", img: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600&q=80" },
+      { title: "Ambient Mindspace", desc: "Peaceful ambient music for meditation.", img: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=600&q=80" },
+      { title: "Epic AI Adventure", desc: "Soundtrack for gaming and action moments.", img: "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=600&q=80" },
+      { title: "Dream Pop AI", desc: "Soft dreamy pop songs enhanced by AI.", img: "https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=600&q=80" },
+      { title: "Neural House Mix", desc: "Deep house music infused with AI tech.", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=600&q=80" }
+    ];
+
+    const playlists = [
+      { name: "Top AI Hits", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=600&q=80" },
+      { name: "Deep Focus AI", img: "https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=600&q=80" },
+      { name: "Workout Mode", img: "https://images.unsplash.com/photo-1551907234-7190d2601e03?w=600&q=80" },
+      { name: "Midnight Coding", img: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=600&q=80" },
+      { name: "AI Jazz Lounge", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=600&q=80" },
+      { name: "Dreamy Nights", img: "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=600&q=80" },
+      { name: "Morning Energy", img: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&q=80" },
+      { name: "Global Beats", img: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=600&q=80" },
+      { name: "Neural Chill", img: "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?w=600&q=80" },
+      { name: "Festival Mode", img: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600&q=80" },
+      { name: "AI Relax Vibes", img: "https://images.unsplash.com/photo-1485579149621-3123dd979885?w=600&q=80" },
+      { name: "Coding All-Night", img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=600&q=80" },
+      { name: "Space Odyssey", img: "https://images.unsplash.com/photo-1497032205916-ac775f0649ae?w=600&q=80" }
+    ];
+
+    // Inject discover cards
+    const discoverGrid = document.getElementById("discover-grid");
+    discoverData.forEach(d => {
+      const card = document.createElement("div");
+      card.className = "card bg-[var(--dark-card)] p-6 rounded-lg shadow hover:shadow-lg transition";
+      card.innerHTML = `
+        <div class="h-48 rounded overflow-hidden">
+          <img src="${d.img}" alt="${d.title}" class="h-full w-full object-cover">
+        </div>
+        <h3 class="mt-4 font-semibold text-xl">${d.title}</h3>
+        <p class="text-sm text-neutral-400 mt-2">${d.desc}</p>
+      `;
+      discoverGrid.appendChild(card);
+    });
+
+    // Inject playlists
+    const playlistGrid = document.getElementById("playlist-grid");
+    playlists.forEach(p => {
+      const card = document.createElement("div");
+      card.className = "card bg-black p-4 rounded-lg shadow hover:bg-neutral-900 transition";
+      card.innerHTML = `
+        <img src="${p.img}" alt="${p.name}" class="rounded mb-3 h-40 w-full object-cover">
+        <h4 class="font-medium">${p.name}</h4>
+      `;
+      playlistGrid.appendChild(card);
+    });
+
+    // Dark mode toggle
+    const toggleBtn = document.getElementById("toggleMode");
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("light");
+      toggleBtn.textContent = document.body.classList.contains("light") ? "🌞" : "🌙";
+    });
+
+    // Music Player
+    const audio = document.getElementById("audioPlayer");
+    const playBtn = document.getElementById("playBtn");
+    let isPlaying = false;
+
+    playBtn.addEventListener("click", () => {
+      if (!isPlaying) {
+        audio.play();
+        playBtn.textContent = "⏸ Pause";
+        isPlaying = true;
+      } else {
+        audio.pause();
+        playBtn.textContent = "▶ Play";
+        isPlaying = false;
+      }
+    });
+  </script>
+
+</body>
+</html>
